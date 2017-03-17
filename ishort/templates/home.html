@@ -1,0 +1,108 @@
+  {% extends "layout.html" %}
+  {% block body %}
+  <section class="content-header">
+    <h1>
+      Dashboard
+    </h1>
+  </section>
+  <section class="content">
+    <section class="row">
+      <div class="col-md-6">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Encurtar</h3>
+          </div>
+          <div class="box-body">
+            <form action="{{ url_for('login')}}" method="post">
+              <div class="form-group has-feedback">
+                <input type="link" class="form-control" placeholder="link"  name=link>
+                <span class="glyphicon glyphicon-link form-control-feedback"></span>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+          <span class="info-box-icon bg-aqua"><i class="ion ion-link"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">LINKS</span>
+            <span class="info-box-number">2,000</span>
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+          <span class="info-box-icon bg-green"><i class="ion ion-android-checkbox-outline"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">CLICKS</span>
+            <span class="info-box-number">1,406,325</span>
+          </div>
+          <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+      </div>
+
+    </section>
+
+
+    <section class="row"> 
+
+        <div class="col-md-6">
+      <!-- TABLE: LATEST ORDERS -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Clicks</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="table-responsive">
+            <table class="table no-margin">
+              <thead>
+                <tr>
+                  <th>ShortID</th>
+                  <th>FullLink</th>
+                  <th>clicks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+
+      <div class="col-md-6">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Resulmo ultimos meses</h3>
+          </div>
+          <div class="box-body">
+            <div class="chart">
+              <canvas id="areaChart" style="height: 250px; width: 783px;" height="250" width="783"></canvas>
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+      </div>
+      <!-- ./box primary-->
+    </div>
+  </section>
+</section>
+{% endblock %}
